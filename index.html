@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raju Amar — QA Engineer Portfolio</title>
+  <meta name="description" content="Portofolio Software Quality Assurance Engineer - Raju Amar.">
+  
+  <link rel="icon" type="image/png" href="RA putih transparant.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="RA putih transparant.png" alt="Logo Raju Amar" class="site-logo">
+      </a>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#bugs" class="nav-link">Bug Reports</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">SOFTWARE QUALITY ASSURANCE</span>
+          <h1>Raju Amar</h1>
+          <p class="hero-role">Manual Testing · Functional · Regression · E2E Testing</p>
+          <p class="hero-bio">
+            QA Engineer yang berfokus pada keandalan aplikasi melalui pengujian terstruktur, validasi alur pengguna, isolasi edge-case, dan penyusunan laporan defek yang presisi.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Lihat Projects</a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+        </div>
+
+        <div class="hero-avatar">
+          <div class="avatar-ring">
+            <img src="PP Raju.png" alt="Raju Amar" class="avatar-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section bg-surface">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Profil dan pendekatan pengujian kualitas perangkat lunak.</p>
+        </div>
+        <div class="about-card">
+          <p>Saya adalah seorang Junior Software Quality Assurance Engineer yang berdedikasi pada pengujian manual terstruktur, verifikasi fungsionalitas, dan integritas UX.</p>
+          <br>
+          <p>Pendekatan pengujian saya mengandalkan pemikiran kritis untuk menganalisis logika aplikasi yang kompleks, menemukan kegagalan edge-case, memvalidasi boundary condition, dan menyajikan laporan defect yang presisi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & TOOLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>QA Capabilities & Tools</h2>
+          <p>Kombinasi metodologi pengujian dan perangkat pendukung kerja harian.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fa-solid fa-vial"></i>
+            <h3>Testing Types</h3>
+            <ol class="custom-ol">
+              <li>Manual & Functional Testing</li>
+              <li>Regression & E2E Testing</li>
+              <li>Exploratory Testing</li>
+              <li>Boundary Value Analysis</li>
+            </ol>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-bug"></i>
+            <h3>Defect Analysis</h3>
+            <ol class="custom-ol">
+              <li>Root cause isolation</li>
+              <li>Bug life cycle tracking</li>
+              <li>Severity and priority tagging</li>
+              <li>Video & log evidence capturing</li>
+            </ol>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Validation Tools</h3>
+            <ol class="custom-ol">
+              <li>Chrome DevTools (Network & Console)</li>
+              <li>Firebase Event & Log Inspection</li>
+              <li>Google Sheets Test Documentation</li>
+              <li>Lark Task Management</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY / PROJECTS -->
+    <section id="projects" class="section bg-surface">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Case Study</h2>
+          <p>Pengujian aplikasi MyTelkomsel (GameHub & Lifestyle Modules).</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-tag">MOBILE & WEB TESTING</span>
+              <h3>MyTelkomsel Gamification & Entertainment</h3>
+            </div>
+            <div class="project-stats">
+              <span class="stat-item"><b>180+</b> Test Cases</span>
+              <span class="stat-item"><b>35+</b> Bugs Found</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Melakukan evaluasi pengujian manual komprehensif pada fitur GameHub (Daily check-in, mission engine, mini-games) dan Lifestyle (Streaming video/audio, reader komik/artikel).
+          </p>
+
+          <div class="project-bullets">
+            <ol class="custom-ol">
+              <li>Validasi sinkronisasi skor leaderboard real-time saat kondisi jaringan buruk.</li>
+              <li>Pengujian edge-case alur klaim reward dan rapid tapping race conditions.</li>
+              <li>Verifikasi kontrol media player saat aplikasi berjalan di background state.</li>
+            </ol>
+          </div>
+
+          <div class="project-footer">
+            <a href="https://docs.google.com/spreadsheets/" target="_blank" rel="noopener noreferrer" class="link-btn">
+              <i class="fa-solid fa-file-lines"></i> View Test Case Matrix (Google Sheets)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED BUG REPORTS -->
+    <section id="bugs" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Bug Reports</h2>
+          <p>Sampel penulisan laporan defek terstruktur dengan indikator status visual.</p>
+        </div>
+
+        <div class="bugs-stack">
+          <!-- Bug 1 -->
+          <div class="bug-box critical">
+            <div class="bug-top">
+              <span class="bug-id">BUG-MYT-2026-089</span>
+              <span class="badge-status fixed"><i class="fa-solid fa-circle"></i> Fixed & Verified</span>
+            </div>
+            <h3 class="bug-title">Double Reward Claim via Rapid Tapping on Daily Check-in</h3>
+            
+            <p class="bug-summary">
+              Tombol "Claim" tidak ter-disabled secara instan sehingga rapid tapping memicu request ganda ke server dan menggandakan hadiah stamp reward.
+            </p>
+
+            <div class="bug-details">
+              <ol class="custom-ol">
+                <li><b>Severity:</b> Critical</li>
+                <li><b>Module:</b> GameHub - Daily Check-in</li>
+                <li><b>Evidence URL:</b> <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" class="evidence-link">drive.google.com/bug-089-video-log</a></li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Bug 2 -->
+          <div class="bug-box minor">
+            <div class="bug-top">
+              <span class="bug-id">BUG-MYT-2026-104</span>
+              <span class="badge-status open"><i class="fa-solid fa-circle"></i> Open / Triage</span>
+            </div>
+            <h3 class="bug-title">Banner Image Asset Lacks Functional Link in Lifestyle Read Tab</h3>
+            
+            <p class="bug-summary">
+              Gambar hero banner di carousel artikel hanya tampil sebagai gambar statis tanpa adanya event listener atau deep-link saat diklik.
+            </p>
+
+            <div class="bug-details">
+              <ol class="custom-ol">
+                <li><b>Severity:</b> Minor / UI</li>
+                <li><b>Module:</b> Lifestyle - Baca</li>
+                <li><b>Evidence URL:</b> <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" class="evidence-link">drive.google.com/bug-104-screenshot</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-surface">
+      <div class="container text-center">
+        <div class="section-title">
+          <h2>Let's Connect</h2>
+          <p>Tertarik untuk diskusi atau kolaborasi seputar Quality Assurance?</p>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://wa.me/6283138466654" target="_blank" rel="noopener noreferrer" class="contact-btn wa">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:rajuamar197@gmail.com" class="contact-btn email">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+          <a href="https://www.linkedin.com/in/raju-amar-sultoni-a3497a383" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/rajuamardev" target="_blank" rel="noopener noreferrer" class="contact-btn github">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Raju Amar. Software Quality Assurance Engineer.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
