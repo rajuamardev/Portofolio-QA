@@ -366,3 +366,37 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .case-study-link span { transition: none; }
 }
+
+
+/* QA terminology and structured case-study evidence */
+.qa-scope-list, .qa-finding-list {
+  margin: 10px 0 0;
+  padding-left: 19px;
+  color: var(--text-sub);
+  font-size: 12px;
+  line-height: 1.9;
+}
+.qa-scope-list li, .qa-finding-list li { padding-left: 3px; margin-bottom: 3px; }
+.qa-scope-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.qa-scope-groups > div {
+  padding: 13px 15px;
+  border: 1px solid rgba(126, 157, 202, .15);
+  border-radius: 9px;
+  background: rgba(8, 15, 30, .24);
+}
+.qa-scope-groups strong { color: #dce8f8; font-size: 12px; }
+.qa-result-note {
+  margin-top: 12px;
+  color: #91a1b6;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.case-study-block > p + p { margin-top: 9px; }
+.case-study-block > p strong { color: #dce8f8; }
+@media (max-width: 640px) {
+  .qa-scope-groups { grid-template-columns: 1fr; }
+}
