@@ -211,30 +211,37 @@
                 <h3>GameHub</h3>
                 <p class="case-study-subtitle">Mini-game experiences and gamification features in a telecom super app.</p>
               </div>
-              <span class="draft-status">Draft · details to be completed</span>
+              <span class="draft-status">Anonymized QA examples</span>
             </div>
             <div class="case-study-grid">
               <div class="case-study-block">
-                <h4>Project overview</h4>
+                <h4>Test Overview</h4>
                 <p>QA validation for a collection of mini-games and related engagement features. The public summary focuses on test scope and approach; internal implementation details are intentionally omitted.</p>
               </div>
               <div class="case-study-block">
-                <h4>Role & approach</h4>
+                <h4>QA Role &amp; Test Approach</h4>
                 <p>Manual QA activities covering feature checks, end-to-end journeys, release validation, and retesting or regression checks when applicable.</p>
               </div>
               <div class="case-study-block case-study-wide">
-                <h4>Testing scope</h4>
-                <div class="case-study-tags">
-                  <span>Mini-game flows</span><span>Scores & leaderboards</span><span>Daily check-in</span><span>Rewards & missions</span><span>Release validation</span><span>GameHub rebuild E2E</span>
-                </div>
+                <h4>Test Scope</h4>
+                <ul class="qa-scope-list">
+                  <li>Play All Mini Games</li><li>Checking Inbox</li><li>Checking Mission</li><li>Checking Gamelist</li><li>Checking Daily Check In</li><li>Checking Reward</li><li>Checking Leaderboard</li><li>Checking Profil</li><li>Checking Stamp Leaderboard</li><li>Checking Stamp History</li>
+                </ul>
               </div>
               <div class="case-study-block">
-                <h4>Example scenario</h4>
-                <p class="placeholder-copy">Scenario, expected result, and actual result will be added after final review.</p>
+                <h4>Test Scenario</h4>
+                <p><strong>Scenario:</strong> Pause a mini-game, resume or restart the session, then recheck the score, leaderboard entry, and timer state.</p>
+                <p><strong>Expected Result:</strong> The game session should follow the defined restart behavior, with the timer and score reflecting the current attempt consistently.</p>
+                <p><strong>Actual Result:</strong> A previously discussed case showed the prior leaderboard entry remaining visible after restart and the timer not progressing as expected.</p>
               </div>
               <div class="case-study-block">
-                <h4>Findings & outcome</h4>
-                <p class="placeholder-copy">Anonymized defect examples, verification outcome, and measurable results are pending confirmation. No internal metrics are published in this draft.</p>
+                <h4>Findings Bug</h4>
+                <ul class="qa-finding-list">
+                  <li><strong>Leaderboard access:</strong> The leaderboard could not be opened during a test attempt.</li>
+                  <li><strong>Score consistency:</strong> Score records across two game experiences appeared to share a best-score value unexpectedly.</li>
+                  <li><strong>Session state:</strong> After a pause and restart flow, the leaderboard state and timer behavior did not match the expected new attempt.</li>
+                </ul>
+                <p class="qa-result-note">These are anonymized summaries of previously discussed observations. Fix status and final regression results are not asserted here.</p>
               </div>
             </div>
             <p class="case-study-note"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Confidential identifiers, internal links, screenshots, and unreleased implementation details are excluded.</p>
@@ -247,30 +254,41 @@
                 <h3>Lifestyle Entertainment</h3>
                 <p class="case-study-subtitle">Content discovery and entertainment journeys across multiple formats.</p>
               </div>
-              <span class="draft-status">Draft · details to be completed</span>
+              <span class="draft-status">Anonymized QA examples</span>
             </div>
             <div class="case-study-grid">
               <div class="case-study-block">
-                <h4>Project overview</h4>
+                <h4>Test Overview</h4>
                 <p>Manual QA coverage for entertainment content experiences, including video, audio, games, and articles, with emphasis on content access and navigation.</p>
               </div>
               <div class="case-study-block">
-                <h4>Role & approach</h4>
+                <h4>QA Role &amp; Test Approach</h4>
                 <p>Daily feature validation, UI and navigation checks, search behavior verification, and retesting or regression checks when applicable.</p>
               </div>
               <div class="case-study-block case-study-wide">
-                <h4>Testing scope</h4>
-                <div class="case-study-tags">
-                  <span>Video & audio playback</span><span>Playback controls</span><span>Content availability</span><span>Games & articles</span><span>Search & redirects</span><span>Error states</span><span>UI & navigation</span>
+                <h4>Test Scope</h4>
+                <div class="qa-scope-groups">
+                  <div><strong>Lifestyle - Video</strong><ul class="qa-scope-list"><li>All</li><li>Series</li><li>Movie</li><li>Shorts</li><li>Live</li><li>Sport</li></ul></div>
+                  <div><strong>Lifestyle - Audio</strong><ul class="qa-scope-list"><li>Audio</li><li>Music</li></ul></div>
+                  <div><strong>Lifestyle - Article</strong></div>
+                  <div><strong>Lifestyle - Comic</strong></div>
+                  <div><strong>Lifestyle - Games</strong></div>
                 </div>
               </div>
               <div class="case-study-block">
-                <h4>Example scenario</h4>
-                <p class="placeholder-copy">A sanitized test scenario with expected and actual behavior will be added after review.</p>
+                <h4>Test Scenario</h4>
+                <p><strong>Scenario:</strong> Open a content category from search and verify that the destination page matches the selected category and current experience.</p>
+                <p><strong>Expected Result:</strong> The selected category should open the correct page, and its content sections should load successfully.</p>
+                <p><strong>Actual Result:</strong> Previously discussed observations included some category searches redirecting to an older page and certain content sections returning an access error.</p>
               </div>
               <div class="case-study-block">
-                <h4>Findings & outcome</h4>
-                <p class="placeholder-copy">Anonymized examples and verified outcomes are pending confirmation. No customer data, internal issue references, or unverified statistics are shown.</p>
+                <h4>Findings Bug</h4>
+                <ul class="qa-finding-list">
+                  <li><strong>Search &amp; navigation:</strong> Search for selected entertainment categories redirected to a legacy experience instead of the expected current page.</li>
+                  <li><strong>Content availability:</strong> Some content sections failed to load and returned an access error.</li>
+                  <li><strong>UI interaction:</strong> Previously discussed cases included non-responsive filter or copy actions and a content image that failed to reload after a network error.</li>
+                </ul>
+                <p class="qa-result-note">Findings are generalized from earlier QA discussions. Fix status and final regression results are not asserted here.</p>
               </div>
             </div>
             <p class="case-study-note"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Product and issue details are generalized for public portfolio use.</p>
@@ -287,7 +305,7 @@
           <p>Feel free to reach out for QA opportunities, collaboration, or professional networking.</p>
         </div>
         <div class="contact-links">
-          <a href="https://wa.me/6283138466654" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Contact Raju on WhatsApp at 083138466654"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp <span>083138466654</span></a>
+          <a href="https://wa.me/6283138466654" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Contact Raju on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
           <a href="mailto:rajuamar197@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
           <a href="https://www.linkedin.com/in/raju-amar-sultoni-a3497a383" target="_blank" rel="noopener noreferrer" class="contact-btn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
           <a href="https://github.com/rajuamardev" target="_blank" rel="noopener noreferrer" class="contact-btn"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
