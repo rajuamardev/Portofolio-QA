@@ -1,61 +1,52 @@
 /**
- * Raju Amar - Portfolio V2 Minimalist Script
+ * Raju Amar Sultoni — QA Portfolio
  */
-
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section[id]');
+  const navLinks = [...document.querySelectorAll('.nav-link')];
+  const sections = [...document.querySelectorAll('main section[id]')];
 
-  // Mobile Menu Toggle
-  if (hamburgerBtn) {
-    hamburgerBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  }
+  const closeMenu = () => {
+    navMenu?.classList.remove('active');
+    hamburgerBtn?.setAttribute('aria-expanded', 'false');
+    hamburgerBtn?.setAttribute('aria-label', 'Open navigation menu');
+  };
 
-  // Close Menu on Link Click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
+  hamburgerBtn?.addEventListener('click', () => {
+    const isOpen = navMenu?.classList.toggle('active') ?? false;
+    hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    hamburgerBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   });
 
-  // Accurate Scrollspy Handler
+  navLinks.forEach(link => link.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) closeMenu();
+  });
+
+  // Highlight the active navigation link while scrolling.
   const handleScrollSpy = () => {
-    const scrollPosition = window.scrollY + 200;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
+    if (!sections.length) return;
+    const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 12;
+    let currentId = nearBottom ? 'contact' : '';
 
-    // Skenario khusus jika scroll sudah mencapai paling bawah halaman
-    if (window.scrollY + windowHeight >= documentHeight - 10) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const contactLink = document.querySelector('.nav-link[href="#contact"]');
-      if (contactLink) contactLink.classList.add('active');
-      return;
-    }
-
-    let currentSectionId = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        currentSectionId = section.getAttribute('id');
-      }
-    });
-
-    if (currentSectionId) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-          link.classList.add('active');
+    if (!nearBottom) {
+      const marker = window.scrollY + 150;
+      sections.forEach(section => {
+        if (marker >= section.offsetTop && marker < section.offsetTop + section.offsetHeight) {
+          currentId = section.id;
         }
       });
     }
+
+    navLinks.forEach(link => {
+      const active = link.getAttribute('href') === `#${currentId}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
   };
 
-  window.addEventListener('scroll', handleScrollSpy);
+  window.addEventListener('scroll', handleScrollSpy, { passive: true });
+  handleScrollSpy();
 });
